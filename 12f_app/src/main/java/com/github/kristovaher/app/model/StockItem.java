@@ -1,4 +1,4 @@
-package com.github.rometkoiv.app.model;
+package com.github.kristovaher.app.model;
 
 import javax.persistence.*;
 

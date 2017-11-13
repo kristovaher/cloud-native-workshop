@@ -1,4 +1,4 @@
-package com.github.rometkoiv.app;
+package com.github.kristovaher.app;
 
 import javax.servlet.http.HttpServletResponse;
 
@@ -8,7 +8,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
-import com.github.rometkoiv.app.model.StockItem;
+import com.github.kristovaher.app.model.StockItem;
 
 @RestController
 @RequestMapping(value = "/stock", produces = MediaType.APPLICATION_JSON_VALUE)
