@@ -6,15 +6,23 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.env.Environment;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
 
-import com.github.kristovaher.app.model.StockItem;
+import com.github.kristovaher.app.domain.model.StockItem;
+import com.github.kristovaher.app.repository.StockItemRepository;
 
 @RestController
 @RequestMapping(value = "/stock", produces = MediaType.APPLICATION_JSON_VALUE)
 public class StockResource {
 	@Autowired
 	private Environment environment;
+    @Autowired
+    private StockItemRepository stockItemRepository;
 
 	@RequestMapping(value = "/get-env", method = RequestMethod.GET)
 	public String getEnv(@RequestParam String env) {
@@ -26,9 +34,7 @@ public class StockResource {
         return "Ping";
     }
     
-    @Autowired
-    private StockItemRepository stockItemRepository;
-
+    
     @RequestMapping(method = RequestMethod.GET, value = "/{id}")
     public StockItem stockItem(@PathVariable("id") Long id, HttpServletResponse response) {
 
@@ -50,6 +56,7 @@ public class StockResource {
 
         return storedItem;
     }
+
     @RequestMapping(value = "", method = RequestMethod.PUT)
     public StockItem update(@RequestBody StockItem stockItem, HttpServletResponse response) {
         if (!stockItemRepository.exists(stockItem.getId())) {
@@ -77,7 +84,4 @@ public class StockResource {
         return stockItemRepository.findAll();
     }
 
-
-    
 }
-
