@@ -7,6 +7,6 @@ deploy:
   username: kristo.vaher@smit.ee
   api: https://api.run.pivotal.io
   organization: maple-org
-  space: staging
+  space: development
   password:
     secure: nA9xxPkWLgGD+pHhIP4SVa6qHJpT2C/+u9S3qfrz1lFcOoVsCSkL54qhoCHMZcnQ6U2vUzkdmV0Yg0folyDM/yEfwFFFQKFa494dR+4fby+ND/0af2UFfxBODMjq0LQr2SCtl+vaMkXak3VAO8h+ieWr2fj8cqKIx9ntijqMQSqWfX7lwzFVcKYjs26E1ExqYV4+XYe14hlmB1/obc/6pevbEUx/uoRlA4F7clfNANNBFy+6hkFzp9syi+7I80goJ6gnARXrLDoPRFUZj9DtSXsmOtX/85CLlSxHvTyrBMJl7m6kr/ZgdPKgD1+uPqVu/lBPoqjGIQp7jpxfLP+skZpoespBXO8cm0R3xL510+qI2+f4TXxrs4dxvLDKLQ/t4JFbPzu4H5xGwX1ZgB0XFIg29ZqFPkNigDuphfhKmY48rlFvC8qfFEF9tyUIKvWT0XJVmWJ+0dytDYTDzZW0b31FNf14Iu4nip4Pk42GjbK91xmNsFqYiI4rxX5U3HMV0csOoECCkYGVttKZGhCqIBgeafqk7tRGMIHXAaVmX874RSaeK+WEBLsx7qK9V2C68PPfGdvcmO8O4zcQ4ld3RRmO64+Oqpmr3jgSVYHaAG2VsUmEpN9NqtqiuPs8mAkHlijTS+VOkswv0fOyi3oGgHi8Mn5f4svkVUMTxDLR6WI=
